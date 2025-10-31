@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Q0aOYe4YLsY=",
+  "dgSpecHash": "LyCeaWcoSFI=",
   "success": true,
   "projectFilePath": "C:\\Users\\uctadmin.54A050E836FD\\Downloads\\mgangatho_project1\\file_conversion\\ToPDFConversion\\ToPDFConversion.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\azure.core\\1.49.0\\azure.core.1.49.0.nupkg.sha512",
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\azure.identity\\1.17.0\\azure.identity.1.17.0.nupkg.sha512",
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.10\\microsoft.extensions.configuration.9.0.10.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.10\\microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.10\\microsoft.extensions.configuration.binder.9.0.10.nupkg.sha512",
@@ -37,6 +38,7 @@
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.graph\\5.95.0\\microsoft.graph.5.95.0.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.graph.core\\3.2.4\\microsoft.graph.core.3.2.4.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.identity.client\\4.78.0\\microsoft.identity.client.4.78.0.nupkg.sha512",
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\4.76.0\\microsoft.identity.client.extensions.msal.4.76.0.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.6.1\\microsoft.identitymodel.jsonwebtokens.8.6.1.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\microsoft.identitymodel.logging\\8.6.1\\microsoft.identitymodel.logging.8.6.1.nupkg.sha512",
@@ -54,18 +56,15 @@
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\polly\\8.6.4\\polly.8.6.4.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\polly.core\\8.6.4\\polly.core.8.6.4.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\std.uritemplate\\2.0.1\\std.uritemplate.2.0.1.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.clientmodel\\1.1.0\\system.clientmodel.1.1.0.nupkg.sha512",
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.clientmodel\\1.7.0\\system.clientmodel.1.7.0.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.10\\system.diagnostics.eventlog.9.0.10.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.6.1\\system.identitymodel.tokens.jwt.8.6.1.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.memory.data\\6.0.0\\system.memory.data.6.0.0.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
     "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.serviceprocess.servicecontroller\\9.0.10\\system.serviceprocess.servicecontroller.9.0.10.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.text.json\\6.0.10\\system.text.json.6.0.10.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.threading.channels\\9.0.10\\system.threading.channels.9.0.10.nupkg.sha512",
-    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\system.threading.channels\\9.0.10\\system.threading.channels.9.0.10.nupkg.sha512"
   ],
   "logs": []
 }

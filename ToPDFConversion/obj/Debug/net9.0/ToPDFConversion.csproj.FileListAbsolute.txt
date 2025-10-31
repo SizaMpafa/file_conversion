@@ -1,0 +1,6 @@
+C:\Users\uctadmin.54A050E836FD\Downloads\mgangatho_project1\file_conversion\ToPDFConversion\obj\Debug\net9.0\ToPDFConversion.csproj.AssemblyReference.cache
+C:\Users\uctadmin.54A050E836FD\Downloads\mgangatho_project1\file_conversion\ToPDFConversion\obj\Debug\net9.0\ToPDFConversion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uctadmin.54A050E836FD\Downloads\mgangatho_project1\file_conversion\ToPDFConversion\obj\Debug\net9.0\ToPDFConversion.AssemblyInfoInputs.cache
+C:\Users\uctadmin.54A050E836FD\Downloads\mgangatho_project1\file_conversion\ToPDFConversion\obj\Debug\net9.0\ToPDFConversion.AssemblyInfo.cs
+C:\Users\uctadmin.54A050E836FD\Downloads\mgangatho_project1\file_conversion\ToPDFConversion\obj\Debug\net9.0\ToPDFConversion.csproj.CoreCompileInputs.cache
+C:\Users\uctadmin.54A050E836FD\Downloads\mgangatho_project1\file_conversion\ToPDFConversion\obj\Debug\net9.0\ToPDFConversion.sourcelink.json
