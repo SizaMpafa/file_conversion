@@ -32,7 +32,8 @@ public class Worker : BackgroundService
             if (ext is ".docx" or ".xlsx" or ".pptx")
             {
                 var outputPath = Path.Combine("output",
-                    Path.GetFileNameWithoutExtension(e.Name) + ".pdf");
+                Path.GetFileNameWithoutExtension(e.Name) + $"_{DateTime.Now:yyyyMMddHHmmss}.pdf");
+
 
                 _logger.LogInformation("Converting {File}", e.Name);
                 await _converter.EnqueueConversionAsync(e.FullPath, outputPath);
