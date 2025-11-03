@@ -1,9 +1,7 @@
 using Azure.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Graph;
-using Microsoft.Graph.Models;
 using Polly;
-using System.Threading.Channels;
 
 namespace ToPDFConversion.Services;
 
@@ -19,7 +17,6 @@ public class GraphConverter
         var clientId = config["AzureAd:ClientId"] ?? throw new ArgumentNullException("AzureAd:ClientId");
         var tenantId = config["AzureAd:TenantId"] ?? throw new ArgumentNullException("AzureAd:TenantId");
 
-        // Interactive login (useful for testing)
         var credential = new InteractiveBrowserCredential(new InteractiveBrowserCredentialOptions
         {
             ClientId = clientId,
@@ -60,39 +57,44 @@ public class GraphConverter
         }
     }
 
-    private async Task ConvertToPdfAsync(string inputPath, string outputPath)
-    {
-        using var stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
+  private async Task ConvertToPdfAsync(string inputPath, string outputPath)
+{
+    using var stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
 
-        // ✅ Upload the file to OneDrive
-        var uploaded = await _graphClient.Me
-            .Drive
-            .Root
-            .ItemWithPath(Path.GetFileName(inputPath))
-            .Content
-            .PutAsync(stream);
+    var drive = await _graphClient.Me.Drive.GetAsync();
+    if (drive == null)
+        throw new InvalidOperationException("Unable to access OneDrive.");
 
-        if (uploaded == null)
-            throw new InvalidOperationException("Upload failed.");
+    var uploaded = await _graphClient
+        .Drives[drive.Id]
+        .Root
+        .ItemWithPath(Path.GetFileName(inputPath))
+        .Content
+        .PutAsync(stream);
 
-        // ✅ Convert to PDF
-        var pdfStream = await _graphClient.Me
-            .Drive
-            .Items[uploaded.Id]
-            .Content
-            .GetAsync(requestConfig =>
-            {
-                requestConfig.QueryParameters.Add("format", "pdf");
-            });
+    if (uploaded == null)
+        throw new InvalidOperationException("Upload failed.");
 
-        var dir = Path.GetDirectoryName(outputPath);
-        if (!string.IsNullOrEmpty(dir))
-            Directory.CreateDirectory(dir);
+    var pdfStream = await _graphClient
+        .Drives[drive.Id]
+        .Items[uploaded.Id]
+        .Content
+        .GetAsync(requestConfig =>
+        {
+            requestConfig.QueryParameters.Format = "pdf";
+        });
 
-        using var outFile = new FileStream(outputPath, FileMode.Create);
-        await pdfStream.CopyToAsync(outFile);
+    var dir = Path.GetDirectoryName(outputPath);
+    if (!string.IsNullOrEmpty(dir))
+        Directory.CreateDirectory(dir);
 
-        // ✅ Delete uploaded temp file
-        await _graphClient.Me.Drive.Items[uploaded.Id].DeleteAsync();
-    }
+    if (pdfStream == null)
+    throw new InvalidOperationException("PDF conversion failed — no content returned.");
+
+    using var outFile = new FileStream(outputPath, FileMode.Create);
+    await pdfStream.CopyToAsync(outFile);
+
+    await _graphClient.Drives[drive.Id].Items[uploaded.Id].DeleteAsync();
+}
+
 }
