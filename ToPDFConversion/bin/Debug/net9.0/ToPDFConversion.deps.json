@@ -10,6 +10,8 @@
         "dependencies": {
           "Azure.Identity": "1.17.0",
           "Microsoft.Extensions.Configuration": "9.0.10",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.10",
+          "Microsoft.Extensions.Configuration.UserSecrets": "9.0.10",
           "Microsoft.Extensions.Hosting": "9.0.10",
           "Microsoft.Extensions.Hosting.WindowsServices": "9.0.10",
           "Microsoft.Extensions.Logging": "9.0.10",
@@ -695,7 +697,7 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "9.0.1025.47515"
           },
           "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll": {
             "rid": "win",

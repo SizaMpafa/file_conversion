@@ -11,7 +11,7 @@ public class GraphConverter
     private readonly System.Threading.Channels.Channel<(string inputPath, string outputPath)> _queue
         = System.Threading.Channels.Channel.CreateUnbounded<(string, string)>();
     private readonly SemaphoreSlim _semaphore = new(5, 5);
-    private static readonly string[] GraphScopes = new[] { "Files.ReadWrite.All", "User.Read" };
+    private static readonly string[] GraphScopes = new[] { "https://graph.microsoft.com/.default" };
 
     public GraphConverter(IConfiguration config)
     {
@@ -19,11 +19,8 @@ public class GraphConverter
         var clientId = config["AzureAd:ClientId"] ?? throw new KeyNotFoundException("AzureAd:ClientId not found in configuration.");
         var clientSecret = config["AzureAd:ClientSecret"] ?? throw new KeyNotFoundException("AzureAd:ClientSecret not found in configuration.");
 
-        var credential = new ClientSecretCredential(
-          tenantId,
-          clientId,
-          clientSecret
-        );
+        var credential = new ClientSecretCredential(tenantId,clientId, clientSecret);
+
         _graphClient = new GraphServiceClient(credential, GraphScopes);
     }
 
@@ -60,9 +57,11 @@ public class GraphConverter
   private async Task ConvertToPdfAsync(string inputPath, string outputPath)
     {
     Console.WriteLine($"[DEBUG] Starting conversion for: {Path.GetFileName(inputPath)}");
-    using var stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
+        using var stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
 
-    var drive = await _graphClient.Me.Drive.GetAsync();
+    // var drive = await _graphClient.Me.Drive.GetAsync();
+    var userId = "sizampafa972gmail.onmicrosoft.com"; 
+    var drive = await _graphClient.Users[userId].Drive.GetAsync();
 
     _ = drive ?? throw new InvalidOperationException("Unable to access OneDrive.");
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\uctadmin.54A050E836FD\\Downloads\\mgangatho_project1\\file_conversion\\ToPDFConversion\\ToPDFConversion.csproj": {}
+    "/workspaces/file_conversion/ToPDFConversion/ToPDFConversion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\uctadmin.54A050E836FD\\Downloads\\mgangatho_project1\\file_conversion\\ToPDFConversion\\ToPDFConversion.csproj": {
+    "/workspaces/file_conversion/ToPDFConversion/ToPDFConversion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\uctadmin.54A050E836FD\\Downloads\\mgangatho_project1\\file_conversion\\ToPDFConversion\\ToPDFConversion.csproj",
+        "projectUniqueName": "/workspaces/file_conversion/ToPDFConversion/ToPDFConversion.csproj",
         "projectName": "ToPDFConversion",
-        "projectPath": "C:\\Users\\uctadmin.54A050E836FD\\Downloads\\mgangatho_project1\\file_conversion\\ToPDFConversion\\ToPDFConversion.csproj",
-        "packagesPath": "C:\\Users\\uctadmin.54A050E836FD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\uctadmin.54A050E836FD\\Downloads\\mgangatho_project1\\file_conversion\\ToPDFConversion\\obj\\",
+        "projectPath": "/workspaces/file_conversion/ToPDFConversion/ToPDFConversion.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/file_conversion/ToPDFConversion/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\uctadmin.54A050E836FD\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -49,6 +49,14 @@
               "version": "[1.17.0, )"
             },
             "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
               "target": "Package",
               "version": "[9.0.10, )"
             },
@@ -97,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
